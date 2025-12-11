@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IA Secretária para WhatsApp | Clínicas de Saúde & Estética</title>
+    <meta
+      name="description"
+      content="Venda mais e reduza o tempo de atendimento com uma IA de secretária/vendedora para WhatsApp, especializada em clínicas de saúde e estética. Pré-atendimento, aquecimento de leads e agendamento automático."
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-slate-950 text-slate-100 min-h-screen">
+    <div class="min-h-screen flex flex-col">
+      <!-- Header -->
+      <header
+        class="sticky top-0 z-40 border-b border-slate-800/80 bg-slate-950/90 backdrop-blur-xl"
+        id="site-header"
+      >
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+          <a href="#inicio" class="flex items-center gap-2.5">
+            <div
+              class="h-9 w-9 rounded-xl bg-emerald-500/15 border border-emerald-500/60 flex items-center justify-center text-sm font-semibold text-emerald-300"
+            >
+              IA
+            </div>
+            <div class="leading-tight">
+              <p class="text-[0.7rem] font-semibold tracking-[0.16em] text-emerald-400 uppercase">
+                Secretária IA
+              </p>
+              <p class="text-xs text-slate-100 font-medium">Para WhatsApp • Saúde & Estética</p>
+            </div>
+          </a>
+
+          <nav class="hidden md:flex items-center gap-6 text-[0.8rem] text-slate-300">
+            <a href="#beneficios" class="hover:text-emerald-300 transition-colors">Benefícios</a>
+            <a href="#como-funciona" class="hover:text-emerald-300 transition-colors">Como funciona</a>
+            <a href="#para-quem" class="hover:text-emerald-300 transition-colors">Para quem</a>
+            <a href="#planos" class="hover:text-emerald-300 transition-colors">Planos</a>
+            <a href="#faq" class="hover:text-emerald-300 transition-colors">Dúvidas</a>
+          </nav>
+
+          <div class="flex items-center gap-2">
+            <a
+              href="#contato"
+              class="hidden sm:inline-flex items-center justify-center px-4 py-1.5 rounded-full text-[0.8rem] font-medium bg-emerald-500 text-slate-950 shadow-sm shadow-emerald-500/60 hover:bg-emerald-400 transition-colors"
+            >
+              Agendar demonstração
+            </a>
+            <button
+              type="button"
+              class="md:hidden inline-flex items-center justify-center h-9 w-9 rounded-full border border-slate-700/70 text-slate-200 hover:bg-slate-900"
+              id="menu-toggle"
+            >
+              <svg
+                id="menu-icon-open"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                class="h-4 w-4"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" />
+              </svg>
+              <svg
+                id="menu-icon-close"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                class="h-4 w-4 hidden"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile nav -->
+        <div id="mobile-menu" class="md:hidden max-h-0 overflow-hidden transition-all duration-200 border-t border-slate-800/70">
+          <nav class="px-4 py-3 flex flex-col gap-2 text-[0.85rem] text-slate-200 bg-slate-950/95">
+            <a href="#beneficios" class="py-1 hover:text-emerald-300" data-mobile-link>Benefícios</a>
+            <a href="#como-funciona" class="py-1 hover:text-emerald-300" data-mobile-link>Como funciona</a>
+            <a href="#para-quem" class="py-1 hover:text-emerald-300" data-mobile-link>Para quem</a>
+            <a href="#planos" class="py-1 hover:text-emerald-300" data-mobile-link>Planos</a>
+            <a href="#faq" class="py-1 hover:text-emerald-300" data-mobile-link>Dúvidas</a>
+            <a
+              href="#contato"
+              class="mt-1 inline-flex items-center justify-center px-4 py-2 rounded-full text-[0.8rem] font-medium bg-emerald-500 text-slate-950 hover:bg-emerald-400"
+              data-mobile-link
+            >
+              Agendar demonstração
+            </a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="flex-1" id="inicio">
+        <!-- Hero -->
+        <section class="relative overflow-hidden">
+          <div
+            class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(16,185,129,0.25),_transparent_60%),radial-gradient(circle_at_bottom,_rgba(56,189,248,0.2),_transparent_65%)] opacity-90"
+          ></div>
+          <div class="relative max-w-6xl mx-auto px-4 pt-10 pb-14 md:pt-16 md:pb-20">
+            <div class="grid md:grid-cols-[minmax(0,1.7fr)_minmax(0,1.4fr)] gap-10 items-center">
+              <div class="space-y-5 md:space-y-6">
+                <div class="inline-flex items-center gap-2 rounded-full border border-emerald-500/40 bg-slate-950/80 px-2.5 py-1 text-[0.7rem]">
+                  <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                  <span class="text-emerald-200 font-medium">Novo</span>
+                  <span class="text-slate-300">IA de secretária para WhatsApp focada em saúde & estética</span>
+                </div>
+
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight">
+                  Transforme o WhatsApp da sua clínica em uma
+                  <span class="text-emerald-400">secretária que vende 24h por dia</span>
+                </h1>
+                <p class="text-sm md:text-base text-slate-200 max-w-xl leading-relaxed">
+                  Atenda pacientes de forma profissional, responda dúvidas imediatas, faça pré-atendimento, aqueça o interesse e deixe a agenda da
+                  clínica sempre cheia — sem sobrecarregar sua equipe.
+                </p>
+
+                <div class="flex flex-wrap items-center gap-3">
+                  <a
+                    href="#contato"
+                    class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-emerald-500 text-slate-950 text-sm font-semibold shadow-[0_0_25px_rgba(16,185,129,0.6)] hover:bg-emerald-400 transition-colors"
+                  >
+                    Agendar demonstração gratuita
+                  </a>
+                  <a
+                    href="#como-funciona"
+                    class="inline-flex items-center justify-center px-4 py-2 rounded-full border border-slate-700/80 bg-slate-900/60 text-[0.8rem] text-slate-100 hover:bg-slate-800/80"
+                  >
+                    Ver como funciona
+                  </a>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-[0.75rem] text-slate-300 max-w-xl">
+                  <div class="rounded-xl border border-slate-800 bg-slate-950/70 p-3">
+                    <p class="text-[0.7rem] uppercase tracking-wide text-slate-400">Focado em clínicas</p>
+                    <p class="mt-1 font-semibold text-slate-50">Saúde & estética</p>
+                    <p class="mt-0.5 text-slate-400">Fluxos pensados para consultas, procedimentos e tratamentos recorrentes.</p>
+                  </div>
+                  <div class="rounded-xl border border-slate-800 bg-slate-950/70 p-3">
+                    <p class="text-[0.7rem] uppercase tracking-wide text-slate-400">WhatsApp primeiro</p>
+                    <p class="mt-1 font-semibold text-slate-50">Atendimento 24/7</p>
+                    <p class="mt-0.5 text-slate-400">Respostas em segundos, mesmo fora do horário comercial.</p>
+                  </div>
+                  <div class="rounded-xl border border-slate-800 bg-slate-950/70 p-3 col-span-2 sm:col-span-1">
+                    <p class="text-[0.7rem] uppercase tracking-wide text-slate-400">Resultados esperados</p>
+                    <p class="mt-1 font-semibold text-emerald-300">Mais horários preenchidos</p>
+                    <p class="mt-0.5 text-slate-400">Mais leads qualificados chegando prontos para agendar.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right: product card -->
+              <aside>
+                <div
+                  class="relative rounded-3xl border border-emerald-500/40 bg-slate-950/90 p-4 md:p-5 shadow-[0_0_45px_rgba(16,185,129,0.4)]"
+                >
+                  <div
+                    class="absolute -top-3 -right-3 rounded-full bg-emerald-500 text-slate-950 text-[0.7rem] font-semibold px-3 py-1 shadow-lg shadow-emerald-500/60"
+                  >
+                    Especial para clínicas
+                  </div>
+                  <p class="text-[0.8rem] uppercase tracking-[0.16em] text-emerald-300 mb-2">O que a IA faz por você</p>
+                  <ul class="space-y-2.5 text-[0.82rem] text-slate-100">
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                      <span>
+                        <span class="font-semibold">Atende no WhatsApp</span> com tom humano, seguindo o padrão de atendimento da sua clínica.
+                      </span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                      <span>
+                        Faz <span class="font-semibold">backup e organização das conversas</span>, criando histórico por paciente.
+                      </span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                      <span>
+                        Realiza <span class="font-semibold">pré-atendimento e triagem básica</span>, sem substituir o médico.
+                      </span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                      <span>
+                        <span class="font-semibold">Aquece o lead</span> com informações, orientações e provas sociais até o agendamento.
+                      </span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                      <span>
+                        <span class="font-semibold">Agenda consultas</span> e identifica quem está marcando, integrando com sua agenda.
+                      </span>
+                    </li>
+                  </ul>
+
+                  <div class="mt-4 rounded-2xl border border-slate-800 bg-slate-900/70 p-3 text-[0.8rem] text-slate-200 space-y-1.5">
+                    <p class="font-semibold text-slate-50">Ideal para quem quer:</p>
+                    <p>✔ Parar de perder leads que chegam fora do horário.</p>
+                    <p>✔ Reduzir o tempo da equipe no WhatsApp.</p>
+                    <p>✔ Ter previsibilidade de agenda e faturamento.</p>
+                  </div>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <!-- Benefícios -->
+        <section id="beneficios" class="max-w-6xl mx-auto px-4 pb-12 md:pb-16">
+          <div class="flex flex-col md:flex-row md:items-end gap-4 mb-6">
+            <div class="flex-1">
+              <h2 class="text-base md:text-xl font-semibold text-slate-50 mb-1">Por que sua clínica precisa de uma secretária IA no WhatsApp?</h2>
+              <p class="text-[0.85rem] md:text-sm text-slate-300 max-w-2xl">
+                Pacientes querem resposta rápida. Sua equipe quer tempo para o que importa. A IA faz o meio de campo: filtra, orienta, organiza e deixa o
+                humano focar no que só ele pode fazer.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-4 md:gap-5 text-[0.85rem] md:text-sm">
+            <div class="rounded-2xl border border-slate-800 bg-slate-950/80 p-4 space-y-1.5">
+              <p class="text-[0.75rem] uppercase tracking-wide text-emerald-300">Mais consultas agendadas</p>
+              <p class="font-semibold text-slate-50">Pare de perder leads quentes</p>
+              <p class="text-slate-300">
+                A IA responde em segundos, inclusive à noite e em finais de semana, mantendo o interesse do paciente até o agendamento.
+              </p>
+            </div>
+            <div class="rounded-2xl border border-slate-800 bg-slate-950/80 p-4 space-y-1.5">
+              <p class="text-[0.75rem] uppercase tracking-wide text-sky-300">Equipe mais leve</p>
+              <p class="font-semibold text-slate-50">Menos tempo presa no WhatsApp</p>
+              <p class="text-slate-300">
+                Sua equipe recebe apenas os casos que realmente precisam de atenção humana, já com contexto e dados organizados.
+              </p>
+            </div>
+            <div class="rounded-2xl border border-slate-800 bg-slate-950/80 p-4 space-y-1.5">
+              <p class="text-[0.75rem] uppercase tracking-wide text-violet-300">Atendimento profissional</p>
+              <p class="font-semibold text-slate-50">Padrão e linguagem da sua marca</p>
+              <p class="text-slate-300">
+                Personalizamos a forma de falar da IA para combinar com o posicionamento da sua clínica — sempre com ética e clareza.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-6 grid md:grid-cols-2 gap-4 md:gap-5 text-[0.85rem] md:text-sm">
+            <div class="rounded-2xl border border-slate-800 bg-slate-950/80 p-4 space-y-1.5">
+              <p class="text-[0.75rem] uppercase tracking-wide text-slate-400">Organização e inteligência</p>
+              <p class="font-semibold text-slate-50">Histórico de cada paciente na sua mão</p>
+              <p class="text-slate-300">
+                Backup de conversas, resumo de históricos e registro das interações por paciente. Ideal para entender o caminho de cada lead até virar
+                consulta.
+              </p>
+            </div>
+            <div class="rounded-2xl border border-slate-800 bg-slate-950/80 p-4 space-y-1.5">
+              <p class="text-[0.75rem] uppercase tracking-wide text-slate-400">Foco em saúde & estética</p>
+              <p class="font-semibold text-slate-50">Respeito às regras da área da saúde</p>
+              <p class="text-slate-300">
+                A IA não faz diagnóstico nem promessas exageradas. Ela informa, orienta e prepara o paciente para uma consulta segura com o profissional.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Como funciona -->
+        <section id="como-funciona" class="border-y border-slate-800/80 bg-slate-950/90">
+          <div class="max-w-6xl mx-auto px-4 py-10 md:py-14">
+            <div class="flex flex-col md:flex-row md:items-center gap-5 mb-6">
+              <div class="flex-1">
+                <h2 class="text-base md:text-xl font-semibold text-slate-50 mb-1">Como funciona na prática</h2>
+                <p class="text-[0.85rem] md:text-sm text-slate-300 max-w-2xl">
+                  Não é só um robô respondendo mensagens. É um projeto feito sob medida para a sua clínica, com etapas claras de implantação e
+                  acompanhamento.
+                </p>
+              </div>
+              <div class="text-[0.8rem] text-slate-300 flex items-center gap-2">
+                <span class="inline-flex h-2 w-2 rounded-full bg-emerald-400"></span>
+                <span>Implantação típica: de 3 a 6 semanas</span>
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-4 text-[0.8rem] md:text-sm">
+              <div class="rounded-2xl border border-emerald-500/60 bg-emerald-500/5 p-4 flex flex-col gap-2">
+                <div class="inline-flex items-center gap-2 text-emerald-300">
+                  <span class="h-6 w-6 rounded-full border border-emerald-400 flex items-center justify-center text-xs font-semibold">1</span>
+                  <span class="text-[0.7rem] uppercase tracking-wide">Diagnóstico</span>
+                </div>
+                <p class="font-semibold text-slate-50">Entendendo sua realidade</p>
+                <ul class="list-disc list-inside text-slate-200 space-y-1">
+                  <li>Mapeamos como é hoje o atendimento no WhatsApp.</li>
+                  <li>Identificamos principais procedimentos e dúvidas.</li>
+                  <li>Definimos o que será automatizado na primeira versão.</li>
+                </ul>
+              </div>
+              <div class="rounded-2xl border border-slate-800 bg-slate-950 p-4 flex flex-col gap-2">
+                <div class="inline-flex items-center gap-2 text-emerald-300">
+                  <span class="h-6 w-6 rounded-full border border-emerald-400 flex items-center justify-center text-xs font-semibold">2</span>
+                  <span class="text-[0.7rem] uppercase tracking-wide text-slate-300">Configuração</span>
+                </div>
+                <p class="font-semibold text-slate-50">IA com a cara da sua clínica</p>
+                <ul class="list-disc list-inside text-slate-200 space-y-1">
+                  <li>Criamos a persona da secretária IA (forma de falar).</li>
+                  <li>Configuramos os fluxos de atendimento e perguntas.</li>
+                  <li>Conectamos com o seu WhatsApp e com a agenda.</li>
+                </ul>
+              </div>
+              <div class="rounded-2xl border border-slate-800 bg-slate-950 p-4 flex flex-col gap-2">
+                <div class="inline-flex items-center gap-2 text-emerald-300">
+                  <span class="h-6 w-6 rounded-full border border-emerald-400 flex items-center justify-center text-xs font-semibold">3</span>
+                  <span class="text-[0.7rem] uppercase tracking-wide text-slate-300">Testes</span>
+                </div>
+                <p class="font-semibold text-slate-50">Ajustes junto com a equipe</p>
+                <ul class="list-disc list-inside text-slate-200 space-y-1">
+                  <li>Rodamos testes com sua equipe e alguns pacientes.</li>
+                  <li>Ajustamos respostas, linguagem e regras de segurança.</li>
+                  <li>Definimos quando a IA passa para um humano.</li>
+                </ul>
+              </div>
+              <div class="rounded-2xl border border-slate-800 bg-slate-950 p-4 flex flex-col gap-2">
+                <div class="inline-flex items-center gap-2 text-emerald-300">
+                  <span class="h-6 w-6 rounded-full border border-emerald-400 flex items-center justify-center text-xs font-semibold">4</span>
+                  <span class="text-[0.7rem] uppercase tracking-wide text-slate-300">Acompanhamento</span>
+                </div>
+                <p class="font-semibold text-slate-50">IA ativa e melhorando sempre</p>
+                <ul class="list-disc list-inside text-slate-200 space-y-1">
+                  <li>Monitoramos as conversas e corrigimos desvios.</li>
+                  <li>Otimizamos o aquecimento e o funil de agendamento.</li>
+                  <li>Você recebe relatórios simples de resultados.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Para quem -->
+        <section id="para-quem" class="max-w-6xl mx-auto px-4 py-10 md:py-14">
+          <div class="flex flex-col md:flex-row md:items-end gap-4 mb-6">
+            <div class="flex-1">
+              <h2 class="text-base md:text-xl font-semibold text-slate-50 mb-1">Para quem essa solução foi pensada?</h2>
+              <p class="text-[0.85rem] md:text-sm text-slate-300 max-w-2xl">
+                Ideal para clínicas e profissionais que já recebem volume de mensagens no WhatsApp e querem profissionalizar o atendimento sem aumentar
+                muito a equipe.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-4 gap-4 text-[0.85rem] md:text-sm">
+            <div class="rounded-2xl border border-slate-800 bg-slate-950/85 p-4 space-y-1.5">
+              <p class="text-[0.75rem] uppercase tracking-wide text-emerald-300">Clínicas de estética</p>
+              <p class="font-semibold text-slate-50">Harmonização, botox, bioestimuladores</p>
+              <p class="text-slate-300">Muitos pedidos de orçamento e dúvidas sobre procedimentos e pacotes.</p>
+            </div>
+            <div class="rounded-2xl border border-slate-800 bg-slate-950/85 p-4 space-y-1.5">
+              <p class="text-[0.75rem] uppercase tracking-wide text-emerald-300">Consultórios médicos</p>
+              <p class="font-semibold text-slate-50">Dermato, nutro, emagrecimento, etc.</p>
+              <p class="text-slate-300">Agenda cheia, equipe enxuta e necessidade de triagem pré-consulta.</p>
+            </div>
+            <div class="rounded-2xl border border-slate-800 bg-slate-950/85 p-4 space-y-1.5">
+              <p class="text-[0.75rem] uppercase tracking-wide text-emerald-300">Odonto & sorrisos</p>
+              <p class="font-semibold text-slate-50">Clínicas odontológicas e orto</p>
+              <p class="text-slate-300">Alto volume de leads vindos de anúncios e redes sociais.</p>
+            </div>
+            <div class="rounded-2xl border border-slate-800 bg-slate-950/85 p-4 space-y-1.5">
+              <p class="text-[0.75rem] uppercase tracking-wide text-emerald-300">Estúdios & outros</p>
+              <p class="font-semibold text-slate-50">Spa, depilação, micropigmentação…</p>
+              <p class="text-slate-300">Qualquer negócio de estética que vive do agendamento recorrente.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Planos -->
+        <section id="planos" class="border-t border-slate-800/80 bg-slate-950/95">
+          <div class="max-w-6xl mx-auto px-4 py-10 md:py-14">
+            <div class="flex flex-col md:flex-row md:items-end gap-4 mb-6">
+              <div class="flex-1">
+                <h2 class="text-base md:text-xl font-semibold text-slate-50 mb-1">Planos e formato de contratação</h2>
+                <p class="text-[0.85rem] md:text-sm text-slate-300 max-w-2xl">
+                  Os valores variam de acordo com o porte da clínica, volume de mensagens e integrações necessárias. Veja abaixo uma base de estrutura
+                  para você adaptar ao seu modelo de negócio.
+                </p>
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-4 md:gap-5 text-[0.85rem] md:text-sm">
+              <!-- Plano Essencial -->
+              <div class="rounded-2xl border border-emerald-500/80 bg-slate-950/95 p-5 flex flex-col">
+                <p class="text-[0.75rem] uppercase tracking-wide text-emerald-300 mb-1">Plano Essencial</p>
+                <p class="text-lg font-semibold text-slate-50 mb-1">Para 1 clínica / 1 número de WhatsApp</p>
+                <p class="text-slate-300 mb-3">Ideal para começar com segurança e já ver resultado em alguns dias.</p>
+                <div class="mb-3">
+                  <p class="text-xs uppercase tracking-wide text-slate-400">Mensalidade a partir de</p>
+                  <p class="text-2xl font-semibold text-emerald-300 leading-tight">R$ 997<span class="text-sm align-top">/mês</span></p>
+                  <p class="text-[0.75rem] text-slate-400 mt-1">Defina aqui o valor ideal para o seu posicionamento.</p>
+                </div>
+                <ul class="space-y-1.5 text-slate-200 mb-4 flex-1">
+                  <li>• Implantação inicial e personalização básica.</li>
+                  <li>• Fluxos de pré-atendimento, dúvidas e agendamento.</li>
+                  <li>• Integração com 1 agenda (Google, software ou similar).</li>
+                  <li>• Ajustes mensais básicos conforme uso.</li>
+                </ul>
+                <a
+                  href="#contato"
+                  class="inline-flex items-center justify-center px-4 py-2.5 rounded-full bg-emerald-500 text-slate-950 text-[0.85rem] font-semibold hover:bg-emerald-400 transition-colors"
+                >
+                  Solicitar proposta para minha clínica
+                </a>
+              </div>
+
+              <!-- Plano Growth -->
+              <div class="rounded-2xl border border-slate-800 bg-slate-950/95 p-5 flex flex-col">
+                <p class="text-[0.75rem] uppercase tracking-wide text-slate-300 mb-1">Plano Growth</p>
+                <p class="text-lg font-semibold text-slate-50 mb-1">Para grupos, redes e várias unidades</p>
+                <p class="text-slate-300 mb-3">Quando você quer padronizar o atendimento em mais de uma unidade.</p>
+                <div class="mb-3">
+                  <p class="text-xs uppercase tracking-wide text-slate-400">Investimento sob consulta</p>
+                  <p class="text-[0.95rem] text-slate-200">Definido conforme número de unidades, agendas e integrações.</p>
+                </div>
+                <ul class="space-y-1.5 text-slate-200 mb-4 flex-1">
+                  <li>• Múltiplos números de WhatsApp e agendas.</li>
+                  <li>• Protocolos diferenciados por unidade ou especialidade.</li>
+                  <li>• Relatórios consolidados de leads e agendamentos.</li>
+                  <li>• Suporte prioritário e reuniões de otimização.</li>
+                </ul>
+                <a
+                  href="#contato"
+                  class="inline-flex items-center justify-center px-4 py-2.5 rounded-full border border-slate-700 bg-slate-900 text-[0.85rem] font-semibold hover:bg-slate-800 transition-colors"
+                >
+                  Conversar sobre o Plano Growth
+                </a>
+              </div>
+
+              <!-- O que está incluso -->
+              <div class="rounded-2xl border border-slate-800 bg-slate-950/95 p-5 flex flex-col">
+                <p class="text-[0.75rem] uppercase tracking-wide text-slate-300 mb-1">Em todos os formatos</p>
+                <p class="text-lg font-semibold text-slate-50 mb-2">O que está sempre incluso</p>
+                <ul class="space-y-1.5 text-slate-200 mb-4 text-[0.85rem]">
+                  <li>• Diagnóstico inicial do atendimento atual.</li>
+                  <li>• Criação da persona e tom de voz da secretária IA.</li>
+                  <li>• Configuração de fluxos de pré-atendimento e aquecimento.</li>
+                  <li>• Regras claras para quando a IA passa para um humano.</li>
+                  <li>• Ajustes contínuos com base em conversas reais.</li>
+                </ul>
+                <div class="mt-auto rounded-xl border border-slate-800 bg-slate-900/80 p-3 text-[0.8rem] text-slate-300">
+                  <p class="font-semibold text-slate-50 mb-1">Pronto para vender?</p>
+                  <p>
+                    Use esta sessão como base do seu site de vendas: apenas ajuste os valores, condições e tempo de contrato conforme a sua estratégia.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="max-w-6xl mx-auto px-4 py-10 md:py-14">
+          <div class="flex flex-col md:flex-row md:items-start gap-6 mb-6">
+            <div class="md:w-1/2 space-y-2">
+              <h2 class="text-base md:text-xl font-semibold text-slate-50">Dúvidas frequentes</h2>
+              <p class="text-[0.85rem] md:text-sm text-slate-300 max-w-xl">
+                Use este bloco para tirar as principais objeções de donos de clínicas e médicos. Você pode adaptar os textos conforme a sua forma de
+                trabalhar.
+              </p>
+            </div>
+            <div class="md:w-1/2 text-[0.8rem] md:text-sm text-slate-300 border border-slate-800 rounded-2xl bg-slate-950/90 p-4">
+              <p class="font-semibold text-slate-50 mb-1">Sugestão de CTA</p>
+              <p>
+                Ao final das perguntas, sempre reforce um convite claro: <span class="text-emerald-300 font-medium">"Vamos marcar uma conversa rápida?"</span>
+                com botão para WhatsApp ou formulário.
+              </p>
+            </div>
+          </div>
+
+          <div class="space-y-3 text-[0.85rem] md:text-sm">
+            <!-- FAQ item -->
+            <div class="rounded-2xl border border-slate-800 bg-slate-950/90">
+              <button
+                type="button"
+                class="w-full flex items-center justify-between gap-4 px-4 py-3 text-left"
+                data-faq-toggle
+              >
+                <span class="font-medium text-slate-50">A IA substitui a minha secretária humana?</span>
+                <svg
+                  class="h-4 w-4 text-slate-400 transition-transform duration-150"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  data-faq-icon
+                >
+                  <path d="M5 8L10 13L15 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div class="px-4 pb-3 text-slate-300 hidden" data-faq-panel>
+                <p>
+                  Não. A ideia é <span class="font-semibold">complementar</span> seu time, não substituir. A IA cuida das tarefas repetitivas (primeiro
+                  contato, dúvidas básicas, coleta de dados e proposta de horários) e sua equipe foca no atendimento humano, cobranças, fechamento e
+                  relacionamento.
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-2xl border border-slate-800 bg-slate-950/90">
+              <button
+                type="button"
+                class="w-full flex items-center justify-between gap-4 px-4 py-3 text-left"
+                data-faq-toggle
+              >
+                <span class="font-medium text-slate-50">É seguro usar IA no atendimento de saúde/estética?</span>
+                <svg
+                  class="h-4 w-4 text-slate-400 transition-transform duration-150"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  data-faq-icon
+                >
+                  <path d="M5 8L10 13L15 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div class="px-4 pb-3 text-slate-300 hidden" data-faq-panel>
+                <p class="mb-1.5">
+                  Sim, desde que sejam respeitadas boas práticas. A IA que configuramos para você:
+                </p>
+                <ul class="list-disc list-inside space-y-1">
+                  <li>Não faz diagnóstico, prescrição ou promessa de resultado.</li>
+                  <li>Sempre reforça a importância da consulta com profissional habilitado.</li>
+                  <li>Pode ser configurada para seguir diretrizes de privacidade de dados (como LGPD).</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="rounded-2xl border border-slate-800 bg-slate-950/90">
+              <button
+                type="button"
+                class="w-full flex items-center justify-between gap-4 px-4 py-3 text-left"
+                data-faq-toggle
+              >
+                <span class="font-medium text-slate-50">Ela funciona com qualquer agenda?</span>
+                <svg
+                  class="h-4 w-4 text-slate-400 transition-transform duration-150"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  data-faq-icon
+                >
+                  <path d="M5 8L10 13L15 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div class="px-4 pb-3 text-slate-300 hidden" data-faq-panel>
+                <p>
+                  Em muitos casos, sim. Normalmente conseguimos integrar com Google Calendar, alguns softwares de agenda de clínicas ou, em último caso,
+                  operar com um painel próprio de horários. No momento da proposta, avaliamos qual formato faz mais sentido para sua realidade.
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-2xl border border-slate-800 bg-slate-950/90">
+              <button
+                type="button"
+                class="w-full flex items-center justify-between gap-4 px-4 py-3 text-left"
+                data-faq-toggle
+              >
+                <span class="font-medium text-slate-50">Em quanto tempo começo a ver resultado?</span>
+                <svg
+                  class="h-4 w-4 text-slate-400 transition-transform duration-150"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  data-faq-icon
+                >
+                  <path d="M5 8L10 13L15 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div class="px-4 pb-3 text-slate-300 hidden" data-faq-panel>
+                <p>
+                  Depende do volume de mensagens que sua clínica já recebe. Em geral, após as 2 primeiras semanas de uso ativo, você já consegue perceber
+                  mais organização, respostas mais rápidas e aumento no número de agendamentos vindos do WhatsApp.
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-2xl border border-slate-800 bg-slate-950/90">
+              <button
+                type="button"
+                class="w-full flex items-center justify-between gap-4 px-4 py-3 text-left"
+                data-faq-toggle
+              >
+                <span class="font-medium text-slate-50">O que eu preciso ter pronto para começar?</span>
+                <svg
+                  class="h-4 w-4 text-slate-400 transition-transform duration-150"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  data-faq-icon
+                >
+                  <path d="M5 8L10 13L15 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div class="px-4 pb-3 text-slate-300 hidden" data-faq-panel>
+                <p class="mb-1.5">Alguns pontos que costumam ajudar muito na implantação:</p>
+                <ul class="list-disc list-inside space-y-1">
+                  <li>Ter clareza dos principais procedimentos que quer vender.</li>
+                  <li>Ter um número de WhatsApp exclusivo da clínica (ou disposto a criar um).</li>
+                  <li>Ter alguém responsável por acompanhar os primeiros dias de uso.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contato / CTA final -->
+        <section id="contato" class="border-t border-slate-800/80 bg-slate-950/95">
+          <div class="max-w-6xl mx-auto px-4 py-10 md:py-14 grid md:grid-cols-[minmax(0,1.3fr)_minmax(0,1.2fr)] gap-8 items-start">
+            <div class="space-y-4">
+              <p class="text-[0.75rem] uppercase tracking-[0.16em] text-emerald-300">Próximo passo</p>
+              <h2 class="text-xl md:text-2xl font-semibold text-slate-50">
+                Vamos conversar sobre o WhatsApp da sua clínica?
+              </h2>
+              <p class="text-[0.85rem] md:text-sm text-slate-300 max-w-xl">
+                Use este formulário como modelo para o seu site de vendas. Você pode direcionar para o seu WhatsApp, para um CRM ou para o e-mail da sua
+                equipe comercial.
+              </p>
+
+              <div class="space-y-2 text-[0.85rem] text-slate-200">
+                <p class="font-semibold text-slate-50">Sugestão de chamada:</p>
+                <p>
+                  "Preencha seus dados que eu ou alguém do meu time entraremos em contato para entender sua realidade e mostrar, sem compromisso, como a
+                  IA pode ajudar a sua clínica." 
+                </p>
+              </div>
+
+              <div class="mt-4 flex flex-wrap items-center gap-3 text-[0.85rem] text-slate-300">
+                <a
+                  href="https://wa.me/5500000000000"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center justify-center px-4 py-2.5 rounded-full bg-emerald-500 text-slate-950 font-semibold hover:bg-emerald-400 transition-colors"
+                >
+                  Falar agora pelo WhatsApp
+                </a>
+                <p class="text-slate-400 text-[0.8rem]">
+                  Substitua o número acima pelo WhatsApp oficial do seu atendimento.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <div class="rounded-2xl border border-slate-800 bg-slate-950/90 p-4 md:p-5 text-[0.85rem] md:text-sm">
+                <form
+                  class="space-y-3"
+                  action="mailto:contato@suaempresa.com"
+                  method="post"
+                  enctype="text/plain"
+                  id="contato-form"
+                >
+                  <div>
+                    <label for="nome" class="block text-[0.8rem] text-slate-300 mb-1">Nome completo</label>
+                    <input
+                      id="nome"
+                      name="Nome"
+                      type="text"
+                      required
+                      class="w-full rounded-xl border border-slate-700 bg-slate-950 px-3 py-2 text-[0.85rem] text-slate-100 placeholder-slate-500 focus:outline-none focus:border-emerald-500"
+                      placeholder="Digite seu nome"
+                    />
+                  </div>
+                  <div>
+                    <label for="clinica" class="block text-[0.8rem] text-slate-300 mb-1">Nome da clínica / consultório</label>
+                    <input
+                      id="clinica"
+                      name="Clínica"
+                      type="text"
+                      class="w-full rounded-xl border border-slate-700 bg-slate-950 px-3 py-2 text-[0.85rem] text-slate-100 placeholder-slate-500 focus:outline-none focus:border-emerald-500"
+                      placeholder="Ex.: Clínica XYZ de Dermatologia"
+                    />
+                  </div>
+                  <div class="grid md:grid-cols-2 gap-3">
+                    <div>
+                      <label for="whatsapp" class="block text-[0.8rem] text-slate-300 mb-1">WhatsApp para contato</label>
+                      <input
+                        id="whatsapp"
+                        name="WhatsApp"
+                        type="tel"
+                        required
+                        class="w-full rounded-xl border border-slate-700 bg-slate-950 px-3 py-2 text-[0.85rem] text-slate-100 placeholder-slate-500 focus:outline-none focus:border-emerald-500"
+                        placeholder="(00) 00000-0000"
+                      />
+                    </div>
+                    <div>
+                      <label for="horario" class="block text-[0.8rem] text-slate-300 mb-1">Melhor horário para falar</label>
+                      <input
+                        id="horario"
+                        name="Melhor horário"
+                        type="text"
+                        class="w-full rounded-xl border border-slate-700 bg-slate-950 px-3 py-2 text-[0.85rem] text-slate-100 placeholder-slate-500 focus:outline-none focus:border-emerald-500"
+                        placeholder="Ex.: manhã, tarde, horário comercial"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label for="mensagem" class="block text-[0.8rem] text-slate-300 mb-1">Como o WhatsApp funciona hoje na sua clínica?</label>
+                    <textarea
+                      id="mensagem"
+                      name="Mensagem"
+                      rows="4"
+                      class="w-full rounded-xl border border-slate-700 bg-slate-950 px-3 py-2 text-[0.85rem] text-slate-100 placeholder-slate-500 focus:outline-none focus:border-emerald-500"
+                      placeholder="Conte um pouco do volume de mensagens, se já tem secretária, principais dúvidas dos pacientes, etc."
+                    ></textarea>
+                  </div>
+
+                  <button
+                    type="submit"
+                    class="w-full inline-flex items-center justify-center px-4 py-2.5 rounded-full bg-emerald-500 text-slate-950 font-semibold hover:bg-emerald-400 transition-colors"
+                  >
+                    Enviar informações por e-mail
+                  </button>
+
+                  <p class="text-[0.7rem] text-slate-500 mt-2">
+                    Ao clicar em enviar, será aberto o aplicativo de e-mail do visitante. Você pode trocar este comportamento por integração com CRM ou
+                    ferramenta de automação.
+                  </p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="border-t border-slate-800/80 bg-slate-950/95">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-3 text-[0.7rem] md:text-[0.75rem] text-slate-500">
+          <p>
+            Modelo de site para vender um serviço de IA de secretária/vendedora para WhatsApp, com foco em clínicas de saúde e estética. Adapte textos,
+            valores e contatos para o seu negócio.
+          </p>
+          <p class="text-slate-600">Use como base, teste com seus primeiros clientes e vá refinando a mensagem.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // Navegação suave para âncoras internas
+        document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+          link.addEventListener('click', function (e) {
+            const href = link.getAttribute('href');
+            if (!href || href === '#' || href === '#0') return;
+            const target = document.querySelector(href);
+            if (!target) return;
+            e.preventDefault();
+            const headerOffset = 70;
+            const rect = target.getBoundingClientRect();
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const top = rect.top + scrollTop - headerOffset;
+            window.scrollTo({ top, behavior: 'smooth' });
+          });
+        });
+
+        // Menu mobile
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const iconOpen = document.getElementById('menu-icon-open');
+        const iconClose = document.getElementById('menu-icon-close');
+        const mobileLinks = document.querySelectorAll('[data-mobile-link]');
+
+        if (menuToggle && mobileMenu) {
+          menuToggle.addEventListener('click', function () {
+            const isOpen = mobileMenu.style.maxHeight && mobileMenu.style.maxHeight !== '0px';
+            if (isOpen) {
+              mobileMenu.style.maxHeight = '0px';
+              iconOpen.classList.remove('hidden');
+              iconClose.classList.add('hidden');
+            } else {
+              mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+              iconOpen.classList.add('hidden');
+              iconClose.classList.remove('hidden');
+            }
+          });
+
+          mobileLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+              mobileMenu.style.maxHeight = '0px';
+              iconOpen.classList.remove('hidden');
+              iconClose.classList.add('hidden');
+            });
+          });
+        }
+
+        // FAQ acordeão
+        const faqButtons = document.querySelectorAll('[data-faq-toggle]');
+        faqButtons.forEach(function (button) {
+          button.addEventListener('click', function () {
+            const parent = button.parentElement;
+            if (!parent) return;
+            const panel = parent.querySelector('[data-faq-panel]');
+            const icon = parent.querySelector('[data-faq-icon]');
+            if (!panel) return;
+
+            const isHidden = panel.classList.contains('hidden');
+
+            if (isHidden) {
+              panel.classList.remove('hidden');
+              if (icon) icon.classList.add('rotate-180');
+            } else {
+              panel.classList.add('hidden');
+              if (icon) icon.classList.remove('rotate-180');
+            }
+          });
+        });
+
+        // Pequeno efeito de sombra no header ao rolar
+        const header = document.getElementById('site-header');
+        if (header) {
+          const toggleShadow = function () {
+            if (window.scrollY > 10) {
+              header.classList.add('shadow-lg', 'shadow-black/40');
+            } else {
+              header.classList.remove('shadow-lg', 'shadow-black/40');
+            }
+          };
+          toggleShadow();
+          window.addEventListener('scroll', toggleShadow);
+        }
+
+        // Alerta simples no envio do formulário para reforçar que é um modelo
+        const form = document.getElementById('contato-form');
+        if (form) {
+          form.addEventListener('submit', function () {
+            alert('Este é um modelo de formulário que abre o seu aplicativo de e-mail. Substitua o e-mail e ajuste o comportamento conforme sua necessidade.');
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
